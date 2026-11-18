@@ -1,0 +1,39 @@
+{
+  "groups": [
+    {
+      "id": "iso",
+      "issuer": { "en": "ISO Certificates", "ar": "" },
+      "items": [
+        { "src": "/images/Certificates/Screenshot_2025-02-12_110658.jpg", "alt": { "en": "ISO certificate, page 1 of 4", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-12_110724.jpg", "alt": { "en": "ISO certificate, page 2 of 4", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-12_110749.jpg", "alt": { "en": "ISO certificate, page 3 of 4", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-12_110817.jpg", "alt": { "en": "ISO certificate, page 4 of 4", "ar": "" } }
+      ]
+    },
+    {
+      "id": "solb-steel",
+      "issuer": { "en": "Solb Steel Certificates", "ar": "" },
+      "items": [
+        { "src": "/images/Certificates/Screenshot_2025-02-12_110954.jpg", "alt": { "en": "Solb Steel certificate, 1 of 2", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-12_111017.jpg", "alt": { "en": "Solb Steel certificate, 2 of 2", "ar": "" } }
+      ]
+    },
+    {
+      "id": "zamil",
+      "issuer": { "en": "Zamil Certificates", "ar": "" },
+      "items": [
+        { "src": "/images/Certificates/Screenshot_2025-02-12_111134.jpg", "alt": { "en": "Zamil certificate, 1 of 4", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-12_111150.jpg", "alt": { "en": "Zamil certificate, 2 of 4", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-12_111208.jpg", "alt": { "en": "Zamil certificate, 3 of 4", "ar": "" } },
+        { "src": "/images/Certificates/Screenshot_2025-02-13_130744.jpg", "alt": { "en": "Zamil certificate, 4 of 4", "ar": "" } }
+      ]
+    },
+    {
+      "id": "modon",
+      "issuer": { "en": "MODON Certificate", "ar": "" },
+      "items": [
+        { "src": "/images/Certificates/Screenshot_2025-02-13_132306.jpg", "alt": { "en": "MODON certificate", "ar": "" } }
+      ]
+    }
+  ]
+}

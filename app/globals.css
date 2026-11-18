@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "./tokens.css";
+/* Lenis' functional CSS (needed so lenis.stop() / start() actually lock and unlock scrolling). */
+@import "lenis/dist/lenis.css";

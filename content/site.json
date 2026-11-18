@@ -1,0 +1,27 @@
+{
+  "name": "Globe Contracting Company",
+  "shortName": "GCC",
+  "tagline": "Building Your Vision, where Dreams Turn into Structures.",
+  "address": "Jeddah – Al Rehab – Prince Mutaib bin Abdulaziz Road – Elite Business Center",
+  "poBox": "PO BOX 18646, Industrial City, Jeddah, KSA",
+  "instagram": "https://www.instagram.com/companyglobe?igsh=OTVqbnlqeTdvaDI0",
+  "copyright": "© 2025 Globe Contracting Company. All rights reserved.",
+  "managers": [
+    {
+      "name": "Ahmed Khalifa",
+      "title": "General Director",
+      "subtitle": "Co. Founder",
+      "email": "ahmed.khalifa@globe-company.com",
+      "phone": "+966536615559",
+      "photo": "/images/Managers/ahmed.jpg"
+    },
+    {
+      "name": "Mohamed Khalifa",
+      "title": "Chief Executive Officer",
+      "subtitle": "Co. Founder",
+      "email": "mohamed.khalifa@globe-company.com",
+      "phone": "+966565363081",
+      "photo": "/images/Managers/mohamed.jpg"
+    }
+  ]
+}
