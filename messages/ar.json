@@ -1,0 +1,26 @@
+{
+  "meta": { "title": "", "titleTemplate": "", "description": "" },
+  "nav": { "home": "", "about": "", "services": "", "projects": "", "certificates": "", "contact": "", "menu": "" },
+  "pages": {
+    "home": { "title": "" },
+    "about": { "title": "" },
+    "services": { "title": "" },
+    "projects": { "title": "" },
+    "project": { "title": "" },
+    "certificates": { "title": "" },
+    "contact": { "title": "" },
+    "stub": ""
+  },
+  "notFound": { "title": "", "body": "", "back": "" },
+  "dev": {
+    "primitivesTitle": "",
+    "openDialog": "",
+    "closeDialog": "",
+    "dialogTitle": "",
+    "dialogDescription": "",
+    "accordionQ1": "",
+    "accordionA1": "",
+    "accordionQ2": "",
+    "accordionA2": ""
+  }
+}

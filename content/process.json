@@ -1,0 +1,47 @@
+{
+  "owner": { "en": "Project Owner / Client", "ar": "" },
+  "stages": [
+    {
+      "id": "project-management",
+      "title": { "en": "Project Management", "ar": "" },
+      "steps": [
+        { "en": "Project Management", "ar": "" },
+        { "en": "Design", "ar": "" },
+        { "en": "RFIs", "ar": "" },
+        { "en": "Submissions", "ar": "" },
+        { "en": "Approvals", "ar": "" },
+        { "en": "Procurement", "ar": "" },
+        { "en": "Scheduling", "ar": "" },
+        { "en": "Quality Assurance", "ar": "" },
+        { "en": "Quality Control", "ar": "" },
+        { "en": "Inspection & Testing", "ar": "" },
+        { "en": "Shipping", "ar": "" }
+      ]
+    },
+    {
+      "id": "fabrication",
+      "title": { "en": "Fabrication", "ar": "" },
+      "steps": [
+        { "en": "Section / Beam Preparation", "ar": "" },
+        { "en": "Cutting", "ar": "" },
+        { "en": "Notching", "ar": "" },
+        { "en": "Rolling", "ar": "" },
+        { "en": "Plate Preparation", "ar": "" },
+        { "en": "Shearing", "ar": "" },
+        { "en": "Bending", "ar": "" },
+        { "en": "Drilling", "ar": "" },
+        { "en": "Punching", "ar": "" },
+        { "en": "QA & QC", "ar": "" },
+        { "en": "Inspection & Testing", "ar": "" },
+        { "en": "Assembly & Fitting", "ar": "" },
+        { "en": "Welding", "ar": "" },
+        { "en": "Cleaning & Straightening", "ar": "" },
+        { "en": "Shot Blasting", "ar": "" },
+        { "en": "Painting", "ar": "" },
+        { "en": "Loading", "ar": "" },
+        { "en": "QA & QC", "ar": "" },
+        { "en": "Inspection & Testing", "ar": "" }
+      ]
+    }
+  ]
+}

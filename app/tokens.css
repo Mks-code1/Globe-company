@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Globe Contracting Company — Design Tokens (Tailwind CSS v4)
+   Usage: in app/globals.css →  @import "tailwindcss";  @import "./tokens.css";
+   MEASURED = taken from the old site's screenshots (logo + 1920px captures).
+   PROPOSED = decided in the design direction (dark-first, IBM Plex, motion).
+   Rule: components use SEMANTIC utilities (bg-bg, text-fg, bg-accent ...),
+         never raw hex, never the brand-* or ink-* scales directly, except on the logo-red
+         accents documented in design-system.md.
+   ========================================================================== */
+
+/* ---------- 1. THEME (static: generates Tailwind utilities) ---------- */
+@theme {
+  /* Remove Tailwind's default palette/radius/shadow so only approved tokens exist. */
+  --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+
+  /* MEASURED: logo red #B61F25 (old menu panel #B42324, unified), logo black #000. */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Brand red scale: 500 = logo red. Others derived (PROPOSED). */
+  --color-brand-50:  #f9eded;
+  --color-brand-100: #f2d7d8;
+  --color-brand-200: #e3aaac;
+  --color-brand-300: #d3797c;   /* red TEXT on dark surfaces (6.4:1 on ink-950) */
+  --color-brand-400: #c54c51;
+  --color-brand-500: #b61f25;   /* LOGO RED */
+  --color-brand-600: #9d1b20;
+  --color-brand-700: #7f161a;
+  --color-brand-800: #621114;
+  --color-brand-900: #450c0e;
+
+  /* Neutral ink scale, slightly cool to sit with the night photography (PROPOSED). */
+  --color-ink-50:  #f8f8f9;
+  --color-ink-100: #f1f1f3;
+  --color-ink-200: #e1e1e4;
+  --color-ink-300: #c4c4c9;
+  --color-ink-400: #9a9aa1;
+  --color-ink-500: #75757d;
+  --color-ink-600: #55555c;
+  --color-ink-700: #3a3a40;
+  --color-ink-800: #222226;
+  --color-ink-900: #141416;
+  --color-ink-950: #0b0b0c;
+
+  /* Fonts: loaded with next/font, which defines the two CSS variables below. */
+  --font-sans: var(--font-plex-sans), var(--font-plex-arabic), "Helvetica Neue", Arial, sans-serif;
+
+  /* Type scale. MEASURED at 1920px on the old site: hero H1 ~100px, menu item ~29px,
+     "MENU" label ~35px. The rest is PROPOSED. Weights: display 700, h2-h4 600, body 400, eyebrow 600. */
+  --text-display: clamp(2.75rem, 5.2vw, 6.25rem);
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: var(--tracking-display);
+  --text-h2: clamp(2rem, 3.4vw, 3.75rem);
+  --text-h2--line-height: 1.12;
+  --text-h2--letter-spacing: var(--tracking-heading);
+  --text-h3: clamp(1.5rem, 2.2vw, 2rem);
+  --text-h3--line-height: 1.2;
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1.3;
+  --text-lead: clamp(1.125rem, 1.4vw, 1.375rem);
+  --text-lead--line-height: 1.6;
+  --text-body: 1rem;
+  --text-body--line-height: 1.7;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: var(--tracking-eyebrow);
+  --text-nav-item: clamp(1.25rem, 1.5vw, 1.8125rem);
+  --text-nav-item--line-height: 1.2;
+  --text-nav-label: clamp(1.125rem, 1.8vw, 2.1875rem);
+  --text-nav-label--line-height: 1;
+
+  /* Shape: sharp by default (MEASURED: old menu panel is a flat rectangle). */
+  --radius-sm: 2px;                                   /* inputs only */
+  --shadow-overlay: 0 12px 32px rgb(0 0 0 / 0.45);    /* menu panel over imagery, lightbox UI */
+
+  /* Easing (names generate ease-expo / ease-standard utilities). */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ---------- 2. SEMANTIC TOKENS (runtime, themeable) ---------- */
+/* DARK is the default theme. Wrap a section in data-theme="light" for a light band. */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:            var(--color-ink-950);
+  --bg-raised:     var(--color-ink-900);
+  --fg:            var(--color-white);
+  --fg-muted:      var(--color-ink-300);      /* 11.3:1 on ink-950 */
+  --line:          rgb(255 255 255 / 0.14);
+  --line-strong:   rgb(255 255 255 / 0.32);
+  --accent:        var(--color-brand-500);    /* fills; white text on it = 6.5:1 */
+  --accent-hover:  var(--color-brand-400);
+  --accent-active: var(--color-brand-600);
+  --on-accent:     var(--color-white);
+  --accent-text:   var(--color-brand-300);    /* red text/links on dark */
+  --focus:         var(--color-white);
+  --scrim:         rgb(0 0 0 / 0.88);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg:            var(--color-white);
+  --bg-raised:     var(--color-ink-50);
+  --fg:            var(--color-ink-950);
+  --fg-muted:      var(--color-ink-600);      /* 7.4:1 on white */
+  --line:          var(--color-ink-200);
+  --line-strong:   var(--color-ink-400);
+  --accent:        var(--color-brand-500);
+  --accent-hover:  var(--color-brand-600);
+  --accent-active: var(--color-brand-700);
+  --on-accent:     var(--color-white);
+  --accent-text:   var(--color-brand-500);    /* 6.5:1 on white */
+  --focus:         var(--color-ink-950);
+  --scrim:         rgb(11 11 12 / 0.7);
+}
+
+/* Map the runtime tokens to utilities: bg-bg, bg-bg-raised, text-fg, text-fg-muted,
+   border-line, bg-accent, text-accent-text, text-on-accent ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-active: var(--accent-active);
+  --color-on-accent: var(--on-accent);
+  --color-accent-text: var(--accent-text);
+  --color-focus: var(--focus);
+  --color-scrim: var(--scrim);
+}
+
+/* ---------- 3. NON-UTILITY VARIABLES (use with arbitrary values, e.g. px-(--gutter)) ---------- */
+:root {
+  --tracking-display: -0.02em;
+  --tracking-heading: -0.015em;
+  --tracking-eyebrow: 0.3em;             /* echoes the logo's "CONTRACTING COMPANY" lockup */
+
+  --gutter: clamp(1.25rem, 2.1vw, 2.5rem);  /* MEASURED: 40px page margin at 1920px */
+  --container-max: 90rem;
+  --container-text: 42rem;
+  --section-y: clamp(5rem, 9vw, 9rem);
+  --hero-title-max: 16ch;                /* MEASURED: old title wraps near 16 characters */
+
+  /* Menu panel (MEASURED): ~202x327px, padding ~29px, item pitch ~62px. */
+  --menu-panel-pad: 1.8125rem;
+  --menu-item-pitch: 3.875rem;
+
+  --rule-accent-height: 4px;             /* red base bar, echoes the logo's red baseline */
+  --rule-accent-width: 4.5rem;
+
+  --z-header: 40;  --z-menu: 50;  --z-lightbox: 60;
+
+  /* Black scrims over imagery are the ONLY gradients allowed. */
+  --overlay-hero: linear-gradient(to bottom, rgb(0 0 0 / 0.55) 0%, rgb(0 0 0 / 0.3) 50%, rgb(11 11 12 / 0.92) 100%);
+  --overlay-card: linear-gradient(to top, rgb(0 0 0 / 0.7) 0%, rgb(0 0 0 / 0) 60%);
+
+  /* CSS-side motion durations (JS-side values live in motion.ts and must match). */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 450ms;
+}
+
+/* ---------- 4. ARABIC / RTL ---------- */
+:lang(ar) {
+  --font-sans: var(--font-plex-arabic), var(--font-plex-sans), Tahoma, Arial, sans-serif;
+  /* Letter-spacing breaks Arabic letter joining: never track or compress Arabic. */
+  --tracking-display: 0;
+  --tracking-heading: 0;
+  --tracking-eyebrow: 0;
+  --text-body--line-height: 1.9;
+  --text-display--line-height: 1.25;
+  --text-h2--line-height: 1.35;
+}
+:lang(ar) .eyebrow { text-transform: none; }
+
+/* ---------- 5. BASE ---------- */
+html { background: var(--bg); color: var(--fg); font-family: var(--font-sans); }
+body { font-size: var(--text-body); line-height: var(--text-body--line-height); }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.bg-accent :focus-visible, .btn-primary:focus-visible { outline-color: var(--color-white); }
+
+/* No-flash reveal: <html data-motion="ok"> is set by an inline head script ONLY when the
+   user has not asked for reduced motion. Without that attribute everything is visible. */
+[data-motion="ok"] [data-reveal] { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Globe Contracting Company",
+    "titleTemplate": "%s | Globe Contracting Company",
+    "description": "Steel, concrete and cladding contractor based in Jeddah, Saudi Arabia."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact Us",
+    "menu": "Menu"
+  },
+  "pages": {
+    "home": { "title": "Home" },
+    "about": { "title": "About Us" },
+    "services": { "title": "Services" },
+    "projects": { "title": "Projects" },
+    "project": { "title": "Project" },
+    "certificates": { "title": "Certificates" },
+    "contact": { "title": "Contact Us" },
+    "stub": "This page is a placeholder. Content arrives in a later step."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "back": "Back to home"
+  },
+  "dev": {
+    "primitivesTitle": "Primitives (dev only)",
+    "openDialog": "Open dialog",
+    "closeDialog": "Close",
+    "dialogTitle": "Dialog primitive",
+    "dialogDescription": "Radix Dialog restyled with the design tokens.",
+    "accordionQ1": "What is this page for?",
+    "accordionA1": "A quick visual check of the shared primitives. It is not available in production.",
+    "accordionQ2": "Where do the styles come from?",
+    "accordionA2": "Only from tokens.css: no extra colors, radii, shadows or gradients."
+  }
+}
